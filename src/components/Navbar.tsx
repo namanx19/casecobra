@@ -11,9 +11,9 @@ const Navbar = async () => {
   console.log("us", user);
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
-        <div className="flex h-14 items-center justify-between  border-zinc-200">
+        <div className="flex h-14 items-center justify-between border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold text-xl">
             case<span className="text-green-600">cobra</span>
           </Link>
@@ -78,7 +78,7 @@ const Navbar = async () => {
                   href="/configure/upload"
                   className={buttonVariants({
                     size: "sm",
-                    className: "hidden sm:flex items-center gap-1",
+                    className: "hidden sm:flex items-center gap-1 text-white",
                   })}
                 >
                   Create case
