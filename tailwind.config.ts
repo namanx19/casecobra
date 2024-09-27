@@ -82,6 +82,18 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    {
+      pattern:
+        /bg-(red|blue|green|yellow|purple|pink|indigo|gray|black|white|rose|zinc)/,
+      variants: ["hover", "focus", "active"],
+    },
+    {
+      pattern:
+        /border-(red|blue|green|yellow|purple|pink|indigo|gray|black|white|rose|zinc)/,
+      variants: ["hover", "focus", "active"],
+    },
+  ],
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
