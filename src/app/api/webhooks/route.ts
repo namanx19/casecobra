@@ -71,11 +71,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ result: event, ok: true });
   } catch (err) {
     console.error(err);
-    return (
-      NextResponse.json({ message: "Something went wrong", ok: false }),
-      {
-        status: 500,
-      }
+    return NextResponse.json(
+      { message: "Something went wrong", ok: false },
+      { status: 500 }
     );
   }
 }
